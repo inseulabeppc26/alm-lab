@@ -22,12 +22,14 @@ $rid = Initialize-RandomIdentifier
 
 function Get-ConnectionByIdOrUrl {
     param(
-        [Parameter(Mandatory)][object[]]$Connections,
+        [AllowEmptyCollection()]
+        [AllowNull()]
+        [object[]]$Connections,
         [Parameter(Mandatory)][string]$Name,
         [Parameter(Mandatory)][string]$Url
     )
 
-    return $Connections |
+    return @($Connections) |
         Where-Object { $_.id -eq $Name -or $_.environmentUrl -eq $Url } |
         Select-Object -First 1
 }
