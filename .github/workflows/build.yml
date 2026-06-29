@@ -1,0 +1,51 @@
+name: build
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.x'
+      - name: Restore
+        run: dotnet restore WarehouseManagement.slnx
+      - name: Build (validates Dataverse solutions)
+        run: dotnet build WarehouseManagement.slnx --configuration Release --no-restore
+      - name: Publish package
+        run: |
+          set -euo pipefail
+          echo "Searching for Packages.Main.csproj..."
+          project=$(find . -type f -name 'Packages.Main.csproj' -print -quit || true)
+          if [ -z "$project" ]; then
+            echo "ERROR: Packages.Main.csproj not found in repository. Expected a project named Packages.Main.csproj."
+            echo ""
+            echo "Top-level repo listing for debugging:"
+            ls -la
+            echo ""
+            echo "You can run locally to investigate: git ls-files | grep -i Packages.Main"
+            exit 1
+          fi
+          echo "Using project: $project"
+          mkdir -p ./drop
+          dotnet publish "$project" --configuration Release --no-build -o ./drop
+          # copy any produced .pdpkg.zip into drop (handles framework-specific bin dirs)
+          found=$(find . -type f -name 'Packages.Main.pdpkg.zip' -print -quit || true)
+          if [ -n "$found" ]; then
+            echo "Copying $found to ./drop/"
+            cp "$found" ./drop/
+          else
+            echo "Packages.Main.pdpkg.zip not found at top-level; searching bin/Release folders..."
+            find . -type f -name 'Packages.Main.pdpkg.zip' -exec cp {} ./drop/ \; || true
+            echo "Completed search/copy of .pdpkg.zip files."
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: drop
+          path: ./drop/Packages.Main.pdpkg.zip
