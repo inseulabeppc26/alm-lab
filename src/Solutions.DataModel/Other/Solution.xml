@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>SolutionsDataModel</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Solutions.DataModel" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>ALMLab</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="ALMLab" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="ALMLab" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>almlab</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>36171</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="almlab_warehouselocation" behavior="0" />
+      <RootComponent type="60" id="{89e37ff2-46d8-4f14-84a0-4bedfdbc4e69}" behavior="0" />
+      <RootComponent type="60" id="{5e5b0b58-1233-4ad1-9f26-d53a0e98f6d7}" behavior="0" />
+      <RootComponent type="60" id="{d42f0306-dc54-4f72-95d0-ee504d5544e9}" behavior="0" />
+      <RootComponent type="1" schemaName="almlab_warehouseitem" behavior="0" />
+      <RootComponent type="60" id="{ed36ab3e-8914-439b-866d-4c109e05435e}" behavior="0" />
+      <RootComponent type="60" id="{977a680d-72c0-4da5-ab93-475015fbb4be}" behavior="0" />
+      <RootComponent type="60" id="{e1df8526-95ae-41c8-b0bb-80032667e81b}" behavior="0" />
+      <RootComponent type="1" schemaName="almlab_warehousetransaction" behavior="0" />
+      <RootComponent type="60" id="{ef68bf9b-2c30-48c1-8358-940f68e97737}" behavior="0" />
+      <RootComponent type="60" id="{7edae80c-7b01-40e4-a206-e456d02d9452}" behavior="0" />
+      <RootComponent type="60" id="{443c6bba-1fe6-44bc-90d2-a278f1c788e9}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies />
+  </SolutionManifest>
+</ImportExportXml>
